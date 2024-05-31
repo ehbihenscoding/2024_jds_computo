@@ -237,16 +237,10 @@ The cost function parameter settings we employed in our experiments are listed i
 #| layout-ncol: 2
 
 # TODO: add the MNIST four-panel figure from the mnist6000.csv file
-import numpy as np
-import matplotlib.pyplot as plt
-plt.plot(np.random.normal(0,1,1000))
-plt.show()
-plt.plot(np.random.normal(0,2,1000))
-plt.show()
-plt.plot(np.random.normal(1,1,1000))
-plt.show()
-plt.plot(np.random.normal(1,1,1000))
-plt.show()
+from scripts.plotutils import *
+
+plot_dataset('compute/mnist6000', methods=['tsne','sammon','isomap','lle'], sample_size=None)
+
 ```
 
 
