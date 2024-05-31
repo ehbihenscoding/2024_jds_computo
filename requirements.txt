@@ -1,5 +1,6 @@
 jupyter
 pandas
+kaleido
 plotly
 numpy
 scikit-learn
