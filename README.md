@@ -32,9 +32,15 @@ Python/conda (we recommand [microconda](https://mamba.readthedocs.io/en/latest/i
 conda env create -f environment.yml
 ```
 
+Computo
+```{bash}
+~/04_Environement/06_Quarto/quarto-1.4.554-linux-rhel7-amd64/quarto-1.4.554/bin/quarto add computorg/computo-quarto-extension
+```
+
 # Exection en local
 
 ```{bash}
+conda activate base
 ~/04_Environement/06_Quarto/quarto-1.4.554-linux-rhel7-amd64/quarto-1.4.554/bin/quarto render
 ~/04_Environement/06_Quarto/quarto-1.4.554-linux-rhel7-amd64/quarto-1.4.554/bin/quarto preview published-paper-tsne.qmd
 ```
