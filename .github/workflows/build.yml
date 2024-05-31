@@ -29,6 +29,7 @@ jobs:
           
       - name: Install Computo extension for Quarto
         run: |
+            using: 'node20'
             quarto add --no-prompt computorg/computo-quarto-extension
 
       - name: Install Python and Dependencies
