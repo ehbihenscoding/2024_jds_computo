@@ -21,7 +21,7 @@ author:
     affiliation-url: https://web.cs.toronto.edu/
     orcid: 0000-0002-8063-7209
 keywords: [visualization, dimensionality reduction, manifold learning, embedding algorithms, multidimensional scaling]
-# bibliography: references.bib
+bibliography: references.bib
 github-user: computorg
 repo: "published-paper-tsne"
 draft: false
