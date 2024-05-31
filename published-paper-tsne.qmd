@@ -238,7 +238,7 @@ The cost function parameter settings we employed in our experiments are listed i
 
 # TODO: add the MNIST four-panel figure from the mnist6000.csv file
 from scripts.plotutils import *
-
+a=1
 plot_dataset('compute/mnist6000', methods=['tsne','sammon','isomap','lle'], sample_size=None)
 
 ```
