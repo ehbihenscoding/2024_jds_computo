@@ -1,21 +1,22 @@
 name: build
 
 on:
+  schedule:
+    - cron: '0 0 * * 0' 
   workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: main
 
 jobs:
   build-deploy:
-    if: "!contains(github.event.head_commit.message, 'skip build')"
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
-      - name: Checking out repository for Github action
-        uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v2
 
-      - name: Set up Quarto
+      - name: Set up quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
@@ -26,10 +27,9 @@ jobs:
           ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/.local/bin
           ~/.TinyTeX/bin/x86_64-linux/tlmgr path add
           ~/.TinyTeX/bin/x86_64-linux/tlmgr install libertinus-fonts
-          
+  
       - name: Install Computo extension for Quarto
         run: |
-            using: 'node20'
             quarto add --no-prompt computorg/computo-quarto-extension
 
       - name: Install Python and Dependencies
